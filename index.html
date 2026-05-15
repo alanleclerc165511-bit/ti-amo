@@ -1,0 +1,127 @@
+export default function CartaParabatai() {
+  const letter = `Amor,
+
+No sé cómo explicarte todo lo que haces sentir en mí, porque de verdad siento que las palabras se quedan cortas contigo. Amo demasiado cómo eres conmigo, cómo me tratas, cómo me haces sentir querido incluso en los días más simples. Amo cuando me dices “mi gordito”, porque contigo hasta las palabras pequeñas se sienten enormes para mi corazón.
+
+Y es raro… porque entre más te conozco, más me enamoras. Me hipnotizas de una manera que no puedo describir. Me calientas, me enamoras, me haces sentir amado y entendido al mismo tiempo. Siento que tenemos el mejor balance del mundo, como si contigo todo se acomodara de una forma bonita.
+
+“no me interesa lo que me compres la verdad, yo estoy feliz con que hablemos y darnos cariñito, no es nesesario que gastes dinero exageradamente en mi y lo entiendo que lo haces por amor, pero no son solo cosas materiales, si no, querernos mucho”.
+
+No tienes idea de lo mucho que significaron esas palabras para mí. De verdad me hicieron llorar, pero de una forma bonita. Porque sentí algo tan sincero, tan puro, tan lleno de amor, que simplemente no pude evitarlo.
+
+Y honestamente, no puedo describir exactamente qué sentí… solo sé que quiero estar contigo el tiempo que me permitas. Quiero seguir construyendo momentos contigo, seguir dándonos cariño, seguir amándonos bonito.
+
+Porque te amo muchísimo. Y no importa si estamos lejos o cerca, te amo con la misma intensidad, con las mismas ganas y con el mismo corazón.
+
+Y cómo quisiera estar ahí contigo, solo para ver tu reacción mientras lees esto… porque creo que una de mis cosas favoritas en el mundo es verte feliz.
+
+Te amo demasiado 🖤`;
+
+  const openLetter = () => {
+    const section = document.getElementById('letter-section');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <div className="min-h-screen overflow-x-hidden bg-black text-white relative font-sans">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,0,80,0.25),transparent_40%),radial-gradient(circle_at_bottom,rgba(0,100,255,0.15),transparent_40%)]" />
+
+      <div className="relative z-10 max-w-5xl mx-auto px-5 py-10">
+        <h1 className="text-center text-5xl md:text-7xl font-bold tracking-[0.3em] text-red-500 drop-shadow-[0_0_25px_rgba(255,0,80,1)] mb-5">
+          PARA MI NIÑO 🖤
+        </h1>
+
+        <p className="text-center text-zinc-300 max-w-2xl mx-auto leading-8 text-lg">
+          Una carta creada entre dimensiones, runas parabatai, luces del Upside Down y magia Pokémon.
+        </p>
+
+        <div className="flex justify-center mt-14">
+          <div className="w-52 h-52 rounded-full border-4 border-red-500 flex items-center justify-center shadow-[0_0_40px_rgba(255,0,80,0.8)] animate-spin backdrop-blur-md bg-black/30">
+            <span className="text-8xl">ᛉ</span>
+          </div>
+        </div>
+
+        <div className="mt-16 rounded-[2rem] border border-red-500/30 bg-zinc-950/80 backdrop-blur-xl p-8 md:p-12 shadow-[0_0_60px_rgba(255,0,80,0.25)] relative overflow-hidden transition-transform duration-700 hover:scale-[1.01] hover:rotate-[1deg]">
+          <div className="absolute top-5 right-5 w-20 h-20 rounded-full border-4 border-white overflow-hidden shadow-xl">
+            <div className="h-1/2 bg-red-500" />
+            <div className="h-1/2 bg-white" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-6 h-6 rounded-full bg-white border-4 border-black" />
+            </div>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-2 mb-12">
+            {'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map((letter, index) => (
+              <div
+                key={index}
+                className="w-7 h-7 rounded-full bg-red-700 text-xs flex items-center justify-center shadow-[0_0_15px_rgba(255,0,80,0.8)] animate-pulse"
+                style={{ animationDelay: `${index * 0.08}s` }}
+              >
+                {letter}
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <h2 className="text-3xl md:text-5xl font-bold text-red-400 mb-6 drop-shadow-[0_0_15px_rgba(255,0,80,0.8)]">
+              Abrir carta para mi niño 💌
+            </h2>
+
+            <p className="text-zinc-300 leading-8 max-w-2xl mx-auto text-lg">
+              Entre monstruos, universos alternos y promesas eternas, siempre existirás como mi lugar favorito.
+            </p>
+
+            <button
+              onClick={openLetter}
+              className="mt-10 px-10 py-5 rounded-full bg-gradient-to-br from-red-500 to-red-700 hover:scale-110 transition-all duration-500 shadow-[0_0_35px_rgba(255,0,80,0.9)] font-bold tracking-wide"
+            >
+              ABRIR CARTA
+            </button>
+          </div>
+        </div>
+
+        <section
+          id="letter-section"
+          className="mt-24 rounded-[2rem] border border-white/10 bg-black/70 backdrop-blur-xl p-8 md:p-14 shadow-[0_0_60px_rgba(255,0,80,0.18)]"
+        >
+          <h2 className="text-center text-4xl md:text-6xl font-bold text-red-500 mb-4 drop-shadow-[0_0_20px_rgba(255,0,80,1)]">
+            Amor 🖤
+          </h2>
+
+          <p className="text-center text-zinc-400 leading-8 max-w-2xl mx-auto mb-12 italic">
+            Entre dimensiones, runas y estrellas… esta carta siempre encontrará el camino hacia ti.
+          </p>
+
+          <div className="space-y-8 text-zinc-200 text-lg leading-10 whitespace-pre-line">
+            {letter}
+          </div>
+
+          <div className="mt-16 border-l-4 border-red-500 bg-red-500/10 p-6 rounded-2xl italic text-red-100 leading-8 text-lg">
+            “No son solo cosas materiales… si no querernos mucho.”
+          </div>
+
+          <div className="text-center text-4xl md:text-5xl text-red-400 font-bold mt-16 animate-pulse drop-shadow-[0_0_25px_rgba(255,0,80,1)]">
+            Te amo demasiado 🖤
+          </div>
+
+          <div className="flex justify-center gap-6 text-4xl mt-12">
+            <span>⚡</span>
+            <span>🔴</span>
+            <span>🕷️</span>
+            <span>🖤</span>
+          </div>
+
+          <p className="text-center text-zinc-500 mt-8 leading-7">
+            Diseñado entre la dimensión del Upside Down, la conexión parabatai y la magia eterna Pokémon.
+          </p>
+        </section>
+      </div>
+
+      <div className="fixed bottom-5 left-1/2 -translate-x-1/2 px-6 py-3 rounded-full border border-white/10 bg-black/70 backdrop-blur-md shadow-[0_0_25px_rgba(255,0,80,0.2)] text-sm text-zinc-300">
+        🎵 Stranger Things vibes + Pokémon nostalgia + Amor infinito
+      </div>
+    </div>
+  );
+}
